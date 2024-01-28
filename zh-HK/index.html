@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mallikātype · 茉莉字型</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/fullpage.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <div class="circle"></div>
+  <div id="mobile-nav">
+    <img id="mobile-navicon" src="../img/icon_menu.svg" >
+    <div id="mobile-navlist">
+      <a href="#introSection">簡介</a>
+      <a href="#fontsSection">字體</a>
+      <a href="#sitemapSection">聯繫我們</a>
+      <a href="../en/index.html">English</a>
+      <a href="../index.html">簡體中文</a>
+      <a href="../zh-HK/index.html">繁體中文</a>
+    </div>
+  </div>
+<!-- Fullpage content -->
+  <div id="fullpage">
+    <div class="section">
+      <div class="grid-wrap" id="main" data-anchor="homeSection">
+        <div id="header">
+          <div>
+            <a href="#"><img src="../img/logotype.svg" id="logo"></a>
+            <button id="news-button" onclick>
+              <span>錦華明朝體官網上線</span>
+              <img src="../img/arrow_s.svg">
+            </button>
+          </div>
+          <div id="header-nav">
+            <a href="#introSection">簡介</a>
+            <a href="#fontsSection">字體</a>
+            <a href="#sitemapSection">聯繫我們</a>
+            <div id="nav-lang">
+              <a href="../en/index.html">EN</a>
+              <div id="lang-line"></div>
+              <a href="../index.html">简</a>
+              <div id="lang-line"></div>
+              <a href="../zh-HK/index.html">繁</a>
+            </div>
+          </div>
+        </div>
+        <div id="hero">
+          <div id="hero-wrap">
+            <button id="arrow-left" class="arrow" onclick="changeFont(-1)">
+              <img src="../img/arrow_left.svg">
+            </button>
+            <p id="hero-text">致力精品中文字型，以理性和美，面向世界。</p>
+            <button id="arrow-right" class="arrow" onclick="changeFont(1)">
+              <img src="../img/arrow_right.svg">
+            </button>
+          </div>
+          <div id="hero-selector">
+            <div id="selector-wrap">
+              <select name="font" id="select-font" onchange=" dynamicSelect(this.options[this.selectedIndex].value);">
+                <option class="font" value="Jinhua Mincho">錦華明朝體</option>
+                <!-- <option class="font" value="TPTQSans" data-t="selector.tptq"></option> -->
+                <option class="font" value="Beiwei Longmen">北魏龍門體</option>
+                <option class="font" value="Zarid Sans SC">29LT札理黑體</option>
+                <option class="font" value="Zhen">珍體</option>
+                <option class="font" value="Glok Sans">洛黑體</option>
+                <option class="font" value="Fiction Gothic">虛構寬黑</option>
+                <option class="font" value="YeBai Script">也白體</option>
+              </select>
+
+              <select name="weight" id="select-weight">
+                <option value="400">常規</option>
+              </select>
+
+              <label name="opentype" id="select-feature" data-t="selector.alternative">替換字形
+                <input type="checkbox" id="alt-checkbox" onclick="changeAlt()">
+                <span class="checkmark"></span>
+              </label>
+
+              <input min="100" max="1000" step="1" type="range" class="vf-bar" id="weight-bar" value="1000">
+              <input min="100" max="1000" step="1" type="range" class="vf-bar" id="counter-bar" value="100">
+              <!-- <label name="opentype" id="select-feature" type="checkbox" data-t="selector.alternative">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label> -->
+            </div>
+
+            <!-- <a href="#fontsSection" id="check-font">
+              <span data-t="selector.checkfont"></span>
+              <img src="../img/arrow_checkfont.svg">
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="grid-wrap" id="intro" data-anchor="introSection">
+        <div id="intro-content">
+          <div id="intro-text">
+            <a class="underline" id="team-link">茉莉字型（Mallikātype）</a><span>專注於設計高品質的中文字庫，追求當代審美。為用戶提供可信賴的、長期的字庫解決方案。尤其對品牌、產品用字，有多年的積澱和研究。此外，我們重視各類國內外字庫標準的落地，並能勝任</span><a class="underline" id="service-link">多語言字庫開發</a><span>。我們提供如下服務：</span>
+            <ul>
+              <li>品牌用字：標題字、正文字，多語言字庫</li>
+              <li>應用用字：印刷品、廣告、數字媒體、建築標識</li>
+              <li>產品用字：軟硬件內嵌字、移動端APP、各類電器</li>
+            </ul>
+          </div>       
+          <img id="intro-image" src="../img/intro.svg">
+        </div>
+        <div id="team" class="popup">
+          <div class="close-wrap">
+            <img src="../img/close.svg" id="team-close">
+          </div>
+          <div class="popup-content">
+            <div class="team-member">
+              <img src="../img/zcy.png">
+              <span style="font-weight: 600">鄭初陽</span>
+              <p>畢業於杭州電子工學院計算機系及德國包豪斯設計碩士。 2008年開始在德國柏林MetaDesign工作，主要從事大眾汽車全球品牌策略與設計。 2010年始，負責北京MetaDesign大眾汽車品牌本土化工作。 2015年後，進入字體設計領域。 2019年創立茉莉字型。其重視思辯，期待自我突破，創造價值。<br/><a class="underline" href="https://zhengchuyang.com/">個人網站</a></p>
+            </div>
+            <div class="team-member">
+              <img src="../img/xtm.png">
+              <span style="font-weight: 600">薛天盟</span>
+              <p>畢業於魯迅美術學院，早期從事品牌策略與平面設計，後聚焦於字體領域，現專注於設計與開發中文字庫。喜愛哲學、繪畫、電影、文學及書法，並從中汲取字體創作的靈感。其設計風格寓精巧於素樸，耐人尋味，尤擅嚴肅且具文化屬性的品質感正文字體。作品曾獲包括紐約TDC、東京TDC在內的各項獎項和榮譽。</p>
+            </div>
+          </div>
+        </div>
+        <div id="service" class="popup">
+          <div class="close-wrap">
+            <img src="../img/close.svg" id="service-close">
+          </div>
+          <div class="popup-content">
+            <div class="multi-lingual">
+              <span style="font-weight: 600">多語言字體服務</span>
+              <p>從中文出發，設計全球各種語言文字。</p>
+              <p>我們與海內外多家字體廠商結為長期合作夥伴。不僅深入合作商業項目，且一起研發技術。因而，我們不僅勝任中文、也能很好地支持西文、阿拉伯文、日文、韓文、印度諸文字等全世界多種文字的設計。</p>
+              <p>此外，我們注重每個地區的本土習慣，堅持設計符合不同地域審美的字體。字體產品能滿足全球性、跨區域的企業、產品及項目的需求。</p>
+            </div>
+            <div class="multi-lingual">
+              <span style="font-weight: 600">我們支持的文字</span>
+              <p>東亞：中文 / 日文 / 韓文</p>
+              <p>歐美：西文 / 西里爾文 / 希臘文</p>
+              <p>中東、西亞 ：阿拉伯文 / 希伯來文</p>
+              <p>南亞、東南亞 ：印度諸文字 / 泰文</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="grid-wrap" id="font" data-anchor="fontsSection">
+        <ul id="font-nav">
+          <li id="jinhua" class="active font-tab">錦華明朝體</li>
+          <!-- <li class="font-tab" id="tptq" data-t="font.tptq"></li> -->
+          <li class="font-tab" id="longmen">北魏龍門體</li>
+          <li class="font-tab" id="zarid">29LT札理黑體</li>
+          <li class="font-tab" id="zhen">珍體</li>
+          <li class="font-tab" id="glok">洛黑體</li>
+          <li class="font-tab" id="fiction">虛構寬黑</li>
+          <li class="font-tab" id="yebai">也白體</li>
+        </ul>
+        <div id="mobile-selectorwrap">
+          <select id="mobile-selector">
+            <option value="jinhua" id="jinhua">錦華明朝體</option>
+            <!-- <option value="tptq" id="tptq" data-t="font.tab4"></option> -->
+            <option value="longmen" id="longmen">北魏龍門體</option>
+            <option value="zarid" id="zarid">29LT札理黑體</option>
+            <option value="zhen" id="zhen">珍體</option>
+            <option value="glok" id="glok">洛黑體</option>
+            <option value="fiction" id="fiction">虛構寬黑</option>
+            <option value="yebai" id="yebai">也白體</option>
+          </select>
+          <img src="../img/arrow_s.svg">
+        </div>
+        <div id="font-intro">
+          <div id="font-main">
+            <img id="font-main-image" src="../img/main/jinhua_main.svg">
+          </div>
+          <p id="font-main-intro">這款宋體的靈感來自於雕版印刷。字形略扁，中宮較大，筆劃溫潤。古典但不陳舊，現代而不冰冷。適用於大小標題、短段落排版。此字體於2022年獲紐約TDC獎。</p>
+          <button id="purchase-button" onclick="location.href='https://mallikatype.com/jinhua'">查看詳情</button>
+        </div>
+        <img id="font-sample" src="../img/sample/jinhua_sample.svg">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="grid-wrap" id="sitemap" data-anchor="sitemapSection">
+        <div id="jasmine">
+          <span class="helper" id="helper1"><span id="helper1-name">大曲都市</span>為logo繪製了<span id="helper1-lingual">拉丁</span>字符，給茉莉澆水。</span>
+          <div class="curve" id="curve1"></div>
+          <img id="jasmine-img" src="../img/logo_default.svg">
+          <div class="curve" id="curve2"></div>
+          <span class="helper" id="helper2">Richor設計了官網，給茉莉土壤。 </span>
+        </div>
+        <div id="sitemap-info">
+          <div class="sitemap-list" id="sitemap-about">
+            <span>關於</span>
+            <ul>
+              <li><a href="#introSection">簡介</a></li>
+              <li><a href="#introSection">我們的團隊</a></li>
+              <li><a href="#introSection">多語言字體服務</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-list" id="sitemap-font">
+            <span>作品</span>
+            <ul>
+              <li><a href="#fontsSection">錦華明朝體</a></li>
+              <!-- <li><a data-t="fontlink.tptq"></a></li> -->
+              <li><a href="#fontsSection">北魏龍門體</a></li>
+              <li><a href="#fontsSection">29LT札理黑體</a></li>
+              <li><a href="#fontsSection">珍體</a></li>
+              <li><a href="#fontsSection">洛黑體</a></li>
+              <li><a href="#fontsSection">虛構寬黑</a></li>
+              <li><a href="#fontsSection">也白體</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-list" id="sitemap-contact">
+            <span>聯繫我們</span>
+              <ul>
+                <li><a href="#">contact@mallikatype.com</a></li>
+              </ul>
+              <div id="sns">
+                <a href="https://twitter.com/mallikatype"><img src="../img/twitter.svg"></a>
+                <a href="https://www.instagram.com/mallikatype/"><img src="../img/instagram.svg"></a>
+                <a href="https://weibo.com/mallikatype"><img src="../img/weibo.svg"></a>
+                <a href="#"><img src="../img/wechat.svg"></a>
+              </div>
+          </div>
+        </div>
+        <footer>
+          <p>Mallikātype © 2020-2023. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/vendor/fullpage.min.js"></script>
+  <script>
+      new fullpage('#fullpage', {
+    autoScrolling:true,
+    scrollHorizontally: true,
+    responsiveWidth: 600,
+    anchors:['homeSection', 'introSection', 'fontsSection', 'sitemapSection']
+  });
+  </script>
+
+</body>
+
+</html>

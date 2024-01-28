@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mallikātype · 茉莉字型</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/fullpage.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    p {
+      font-size: 0.935em;
+    line-height: 1.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+  <div id="mobile-nav">
+    <img id="mobile-navicon" src="../img/icon_menu.svg" >
+    <div id="mobile-navlist">
+      <a href="#introSection">Intro</a>
+      <a href="#fontsSection">Fonts</a>
+      <a href="#sitemapSection">Contact</a>
+      <a href="../en/index.html">English</a>
+      <a href="../index.html">简体中文</a>
+      <a href="../zh-HK/index.html">繁體中文</a>
+    </div>
+  </div>
+<!-- Fullpage content -->
+  <div id="fullpage">
+    <div class="section">
+      <div class="grid-wrap" id="main" data-anchor="homeSection">
+        <div id="header">
+          <div>
+            <a href="#"><img src="../img/logotype.svg" id="logo"></a>
+            <button id="news-button" onclick>
+              <span>Jinhua Mincho homepage is on live!</span>
+              <img src="../img/arrow_s.svg">
+            </button>
+          </div>
+          <div id="header-nav">
+            <a href="#introSection">About</a>
+            <a href="#fontsSection">Fonts</a>
+            <a href="#sitemapSection">Contact</a>
+            <div id="nav-lang">
+              <a href="../en/index.html">EN</a>
+              <div id="lang-line"></div>
+              <a href="../index.html">简</a>
+              <div id="lang-line"></div>
+              <a href="../zh-HK/index.html">繁</a>
+            </div>
+          </div>
+        </div>
+        <div id="hero">
+          <div id="hero-wrap">
+            <button id="arrow-left" class="arrow" onclick="changeFont(-1)">
+              <img src="../img/arrow_left.svg">
+            </button>
+            <p id="hero-text">致力精品中文字型，以理性和美，面向世界。</p>
+            <button id="arrow-right" class="arrow" onclick="changeFont(1)">
+              <img src="../img/arrow_right.svg">
+            </button>
+          </div>
+          <div id="hero-selector">
+            <div id="selector-wrap">
+              <select name="font" id="select-font" onchange=" dynamicSelect(this.options[this.selectedIndex].value);">
+                <option class="font" value="Jinhua Mincho">Jinhua Mincho</option>
+                <!-- <option class="font" value="TPTQSans" data-t="selector.tptq"></option> -->
+                <option class="font" value="Beiwei Longmen">Beiwei Longmen</option>
+                <option class="font" value="Zarid Sans SC">29LT Zarid Sans SC</option>
+                <option class="font" value="Zhen">Zhen</option>
+                <option class="font" value="Glok Sans">Glok Sans</option>
+                <option class="font" value="Fiction Gothic">Fiction Gothic</option>
+                <option class="font" value="YeBai Script">Yebai Script</option>
+              </select>
+
+              <select name="weight" id="select-weight">
+                <option value="400">Regular</option>
+              </select>
+              
+              <input min="100" max="1000" step="1" type="range" class="vf-bar" id="weight-bar" value="1000">
+              <input min="100" max="1000" step="1" type="range" class="vf-bar" id="counter-bar" value="100">
+              
+              <label name="opentype" id="select-feature" data-t="selector.alternative">Alternatives
+                <input type="checkbox" id="alt-checkbox" onclick="changeAlt()">
+                <span class="checkmark"></span>
+              </label>
+              <!-- <label name="opentype" id="select-feature" type="checkbox" data-t="selector.alternative">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label> -->
+            </div>
+
+            <!-- <a href="#fontsSection" id="check-font">
+              <span data-t="selector.checkfont"></span>
+              <img src="../img/arrow_checkfont.svg">
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="grid-wrap" id="intro" data-anchor="introSection">
+        <div id="intro-content">
+          <div id="intro-text">
+            <a class="underline" id="team-link">Mallikātype</a><span> specializes in designing high-quality Chinese typefaces that reflect contemporary aesthetics. We provide users with reliable and long-term font solutions, with a particular focus on brand and product typography, based on years of research and experience. Additionally, we prioritize the implementation of various domestic and international font standards and are capable of developing </span><a class="underline" id="service-link">multilingual font libraries</a><span>. We provide services as follows:</span>
+            <ul>
+              <li>Brand fonts: headline and body fonts, multilingual font libraries</li>
+              <li>Application fonts: print media, advertising, digital media, architectural signage</li>
+              <li>Product fonts: embedded fonts in software and hardware, mobile apps, and various appliances</li>
+            </ul>
+          </div>       
+          <img id="intro-image" src="../img/intro.svg">
+        </div>
+        <div id="team" class="popup">
+          <div class="close-wrap">
+            <img src="../img/close.svg" id="team-close">
+          </div>
+          <div class="popup-content">
+            <div class="team-member">
+              <img src="../img/zcy.png">
+              <span style="font-weight: 600">Zheng Chuyang </span>
+              <p>Graduated from the Computer Science Department of Hangzhou Institute of Electronic Engineering and holds a Master's degree in Arts from Bauhaus in Dessau, Germany. Starting in 2008, he worked at MetaDesign Berlin, mainly focusing on global branding strategy and design for Volkswagen. From 2010, he was responsible for the localization of the Volkswagen brand in Beijing at MetaDesign. Since 2015, he has been working in the field of typeface design. In 2019, he founded Mallikātype, emphasizing critical thinking and self-improvement, and creating value.<br/><a class="underline" href="https://zhengchuyang.com/">Personal site</a></p>
+            </div>
+            <div class="team-member">
+              <img src="../img/xtm.png">
+              <span style="font-weight: 600">Xue Tianmeng</span>
+              <p>graduated from the Luxun Academy of Fine Arts and initially worked in brand strategy and graphic design. He later focused on type design and is currently specializing in designing and developing Chinese typefaces. He draws inspiration for font design from philosophy, painting, film, literature, and calligraphy. His design style is subtle and elegant, and he excels in creating serious and culturally significant body text fonts. His works have won various awards and honors, including those from the New York TDC and Tokyo TDC.</p>
+            </div>
+          </div>
+        </div>
+        <div id="service" class="popup">
+          <div class="close-wrap">
+            <img src="../img/close.svg" id="service-close">
+          </div>
+          <div class="popup-content">
+            <div class="multi-lingual">
+              <span style="font-weight: 600">Multi-language service</span>
+              <p>Mallikātype not only offers design services for Chinese but also for various languages worldwide. We can help enhance the visual aesthetics of your content in multiple languages.</p>
+              <p>Mallikātype has established long-term partnerships with various type foundries, both domestic and international. Through collaborations on business projects and typeface technology developments, we strive to provide support not only for Chinese languages, but also for other languages such as Latin, Arabic, Japanese, Korean, Indian languages, and more.</p>
+              <p>We understand and respect the diverse user habits in different regions, and are committed to designing typefaces that cater to various aesthetics. Our typefaces can meet the requirements of global firms, products, and projects.</p>
+            </div>
+            <div class="multi-lingual">
+              <span style="font-weight: 600">We support for languages</span>
+              <p>East Asia: Chinese / Japanese / Korean</p>
+              <p>Europe and America: Latin / Cyrillic / Greek</p>
+              <p>Middle East, West Asia: Arabic / Hebrew</p>
+              <p>South Asia, Southeast Asia: Indian scripts / Thai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="grid-wrap" id="font" data-anchor="fontsSection">
+        <ul id="font-nav">
+          <li id="jinhua" class="active font-tab">Jinhua Mincho</li>
+          <!-- <li class="font-tab" id="tptq" data-t="font.tptq"></li> -->
+          <li class="font-tab" id="longmen">Beiwei Longmen</li>
+          <li class="font-tab" id="zarid">29LT Zarid Sans SC</li>
+          <li class="font-tab" id="zhen">Zhen</li>
+          <li class="font-tab" id="glok">Glok Sans</li>
+          <li class="font-tab" id="fiction">Fiction Gothic</li>
+          <li class="font-tab" id="yebai">Yebai Script</li>
+        </ul>
+        <div id="mobile-selectorwrap">
+          <select id="mobile-selector">
+            <option value="jinhua" id="jinhua">Jinhua Mincho</option>
+            <!-- <option value="tptq" id="tptq" data-t="font.tab4">TPTQ Sans</option> -->
+            <option value="longmen" id="longmen">Beiwei Longmen</option>
+            <option value="zarid" id="zarid">29LT Zarid Sans SC</option>
+            <option value="zhen" id="zhen">Zhen</option>
+            <option value="glok" id="glok">Glok Sans</option>
+            <option value="fiction" id="fiction">Fiction Gothic</option>
+            <option value="yebai" id="yebai">Yebai Script</option>
+          </select>
+          <img src="../img/arrow_s.svg">
+        </div>
+        <div id="font-intro">
+          <div id="font-main">
+            <img id="font-main-image" src="../img/main/jinhua_main.svg">
+          </div>
+          <p id="font-main-intro">Drawing inspiration from woodblock printing, Jinhua Mincho features a flat shape and wide counters, coupled with gentle strokes that exude a classic yet modern feel. This versatile font is perfect for title, subtitle, and short paragraph layouts. In recognition of its exceptional design, Jinhua Mincho was awarded the New York TDC in 2022.</p>
+          <button id="purchase-button" onclick="location.href='https://mallikatype.com/jinhua'">See details</button>
+        </div>
+        <img id="font-sample" src="../img/sample/jinhua_sample.svg">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="grid-wrap" id="sitemap" data-anchor="sitemapSection">
+        <div id="jasmine">
+          <span class="helper" id="helper1"><span id="helper1-name">Omagari Toshi</span> designed the <span id="helper1-lingual">latin</span> logotype for Mallikā.</span>
+          <div class="curve" id="curve1"></div>
+          <img id="jasmine-img" src="../img/logo_default.svg">
+          <div class="curve" id="curve2"></div>
+          <span class="helper" id="helper2">Richor created the website for Mallikā.</span>
+        </div>
+        <div id="sitemap-info">
+          <div class="sitemap-list" id="sitemap-about">
+            <span>About</span>
+            <ul>
+              <li><a href="#introSection">Introduction</a></li>
+              <li><a href="#introSection">Our team</a></li>
+              <li><a href="#introSection">Multilingual service</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-list" id="sitemap-font">
+            <span>Fonts</span>
+            <ul>
+              <li><a href="#fontsSection">Jinhua Mincho</a></li>
+              <!-- <li><a data-t="fontlink.tptq"></a></li> -->
+              <li><a href="#fontsSection">Beiwei Longmen</a></li>
+              <li><a  href="#fontsSection">29LT Zarid Sans SC</a></li>
+              <li><a href="#fontsSection">Zhen</a></li>
+              <li><a href="#fontsSection">Glok Sans</a></li>
+              <li><a href="#fontsSection">Fiction Gothic</a></li>
+              <li><a href="#fontsSection">Yebai Script</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-list" id="sitemap-contact">
+            <span>Contact</span>
+              <ul>
+                <li><a>contact@mallikatype.com</a></li>
+              </ul>
+              <div id="sns">
+                <a href="https://twitter.com/mallikatype"><img src="../img/twitter.svg"></a>
+                <a href="https://www.instagram.com/mallikatype/"><img src="../img/instagram.svg"></a>
+                <a href="https://weibo.com/mallikatype"><img src="../img/weibo.svg"></a>
+                <a href="#"><img src="../img/wechat.svg"></a>
+              </div>
+          </div>
+        </div>
+        <footer>
+          <p>Mallikātype © 2020-2023. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/vendor/fullpage.min.js"></script>
+  <script>
+      new fullpage('#fullpage', {
+    autoScrolling:true,
+    scrollHorizontally: true,
+    responsiveWidth: 600,
+    anchors:['homeSection', 'introSection', 'fontsSection', 'sitemapSection']
+  });
+  </script>
+
+</body>
+
+</html>
