@@ -130,18 +130,16 @@ function dynamicSelect(listindex)
             resetSel();
             weightSelector.options[0]=new Option("Regular","400");
             break;
-          case "Zarid Sans SC":
+          case "29LT Zarid Sans SC":
             resetSel();
-            weightSelector.options[0]=new Option("Thin","100");
-            weightSelector.options[1]=new Option("Extra Light","200");
-            weightSelector.options[2]=new Option("Light","300");
-            weightSelector.options[3]=new Option("Regular","400");
-            weightSelector.options[4]=new Option("Medium","500");
-            weightSelector.options[5]=new Option("Semibold","600"); 
-            weightSelector.options[6]=new Option("Bold","700");
-            weightSelector.options[7]=new Option("Black","900");
-            heroText.style.fontWeight = "900";
-            weightSelector.value = "900"; 
+            weightSelector.options[0]=new Option("超细","100");
+            weightSelector.options[1]=new Option("极细","200");
+            weightSelector.options[2]=new Option("细体","300");
+            weightSelector.options[3]=new Option("常规","400");
+            weightSelector.options[4]=new Option("中等","500");
+            weightSelector.options[5]=new Option("半粗","600"); 
+            weightSelector.options[6]=new Option("粗体","700");
+            weightSelector.options[7]=new Option("超粗","900");  
             break;
         }
         return true;
@@ -172,7 +170,7 @@ close2.onclick = function() {
 var fontsIntro = [
   ["锦华明朝体", "这款宋体的灵感来自于雕版印刷。字形略扁，中宫较大，笔画温润。古典但不陈旧，现代而不冰冷。适用于大小标题、短段落排版。此字体于2022年获纽约TDC奖。", "https://mallikatype.com/jinhua/"],
   ["錦華明朝體", "這款宋體的靈感來自於雕版印刷。字形略扁，中宮較大，筆劃溫潤。古典但不陳舊，現代而不冰冷。適用於大小標題、短段落排版。此字體於2022年獲紐約TDC獎。", "https://mallikatype.com/jinhua/"],
-  ["Jinhua Mincho", "Drawing inspiration from woodblock printing, Jinhua Mincho features a flat shape and wide counters, coupled with gentle strokes that exude a classic yet modern feel. This versatile font is perfect for title, subtitle, and short paragraph layouts. In recognition of its exceptional design, Jinhua Mincho was awarded the New York TDC in 2022.", "https://mallikatype.com/jinhua/"],
+  ["Jinhua Serif", "Drawing inspiration from woodblock printing, Jinhua Serif features a flat shape and wide counters, coupled with gentle strokes that exude a classic yet modern feel. This versatile font is perfect for title, subtitle, and short paragraph layouts. In recognition of its exceptional design, Jinhua Serif was awarded the New York TDC in 2022.", "https://mallikatype.com/jinhua/"],
   ["珍体","贵州珍酒的品牌定制字体。灵感来于宋徽宗的书法，且用现代的面貌呈现。", ""],
   ["珍體","貴州珍酒的品牌定製字體。靈感來於宋徽宗的書法，且用現代的面貌呈現。", ""],
   ["Zhen","Zhen is a branding font used by Guizhou ZhenJiu, inspired by the calligraphy of Emperor Song Huizong. It combines traditional elements with a modern aesthetic to create a unique visual identity.", ""],
@@ -191,9 +189,9 @@ var fontsIntro = [
   ["也白体","也白体希望还原稿纸时代的手写意趣，每个汉字都不等宽，去除了一般字库的机械感。又通过OpenType功能再现了“乌霉团”，“打叉”，“换位符”等手写时才有的记号，妙趣横生。", ""],
   ["也白體","也白體希望還原稿紙時代的手寫意趣，每個漢字都不等寬，去除了一般字庫的機械感。又通過OpenType功能再現了「烏黴團」，「打叉」，「換位符」等手寫時才有的記號，妙趣橫生。", ""],
   ["Yebai Script", "Yebai Script aims to recall the old handwriting interests. Each Chinese character is different in width, removing the rigid feeling of common fonts. Yebai also represents many handwriting marks like crossings, which shows sense of humour.", ""],
-  ["29LT札理黑体","29LT札理黑体是一款无衬线字体，根植于书法，并经过重新提炼。简洁的轮廓与人文气息浓郁的笔画交织辉映，给人留下了明晰轻畅的印象。整体的连贯性与局部的独特性产生了一种微妙的平衡。字体弥合了高度现代的构成主义美学与舒适性和可读性之间的鸿沟。","https://www.29lt.com/product/29lt-zarid-sans-hzl/"],
-  ["29LT札理黑體","29LT札理黑體是一款無襯線字體，根植於書法，並經過重新提煉。簡潔的輪廓與人文氣息濃郁的筆劃交織輝映，給人留下了明晰輕暢的印象。整體的連貫性與局部的獨特性產生了一種微妙的平衡。字體彌合了高度現代的構成主義美學與舒適性和可讀性之間的鴻溝。","https://www.29lt.com/product/29lt-zarid-sans-hzl/"],
-  ["29LT Zarid Sans SC", "29LT Zarid Sans SC is a sans serif typeface rooted and refined from calligraphy. Simple outlines with humanistic strokes, 29LT Zarid  Sans SC makes people feel clear and light. With a delicate balance between overall coherence and partial originality, it bridges the gap between modern constructivist aesthetic and readability。", "https://www.29lt.com/product/29lt-zarid-sans-hzl/"]
+  ["29LT札理黑体","29LT札理黑体是一款无衬线字体，根植于书法，并经过重新提炼。简洁的轮廓与人文气息浓郁的笔画交织辉映，给人留下了明晰轻畅的印象。整体的连贯性与局部的独特性产生了一种微妙的平衡。字体弥合了高度现代的构成主义美学与舒适性和可读性之间的鸿沟。",""],
+  ["29LT札理黑體","29LT札理黑體是一款無襯線字體，根植於書法，並經過重新提煉。簡潔的輪廓與人文氣息濃郁的筆劃交織輝映，給人留下了明晰輕暢的印象。整體的連貫性與局部的獨特性產生了一種微妙的平衡。字體彌合了高度現代的構成主義美學與舒適性和可讀性之間的鴻溝。",""],
+  ["29LT Zarid Sans SC", "29LT Zarid Sans SC is a sans serif typeface rooted and refined from calligraphy. Simple outlines with humanistic strokes, 29LT Zarid  Sans SC makes people feel clear and light. With a delicate balance between overall coherence and partial originality, it bridges the gap between modern constructivist aesthetic and readability.", ""]
 ]
 
 var mainImage = document.getElementById("font-main-image");
@@ -259,20 +257,17 @@ var connectTabs = new Tabs();
 var hkLogo = [
   ["大曲都市", "拉丁", "/img/logo_default.svg"],
   ["天格思", "蒙文", "/img/logo_mongolian.svg"],
-  ["帕斯卡爾", "阿文", "/img/logo_arabic.svg"],
-  ["張家碩", "韓文", "/img/logo_hangul.svg"]
-];
+  ["帕斯卡爾", "阿文", "/img/logo_arabic.svg"]
+]
 var cnLogo = [
   ["大曲都市", "拉丁", "/img/logo_default.svg"],
   ["天格思", "蒙文", "/img/logo_mongolian.svg"],
-  ["帕斯卡尔", "阿文", "/img/logo_arabic.svg"],
-  ["张家硕", "韩文", "/img/logo_hangul.svg"]
-];
+  ["帕斯卡尔", "阿文", "/img/logo_arabic.svg"]
+]
 var enLogo = [
   ["Omagari Toshi", "Latin", "/img/logo_default.svg"],
   ["Tengis", "Mongolian", "/img/logo_mongolian.svg"],
-  ["Pascal Zoghbi", "Arabic", "/img/logo_arabic.svg"],
-  ["Zhang Jiashuo", "Hangul", "/img/logo_hangul.svg"]
+  ["Pascal Zoghbi", "Arabic", "/img/logo_arabic.svg"]
 ]
 var logoImg = document.getElementById('jasmine-img');
 var curve1 = document.getElementById('curve1');
@@ -286,7 +281,7 @@ var currentURL = window.location.pathname;
 logoImg.onclick = function() {
   var rnd = 0;
   rnd = Math.floor(Math.random() * cnLogo.length);
-  if (currentURL == "/index.html" || currentURL == "/") {
+  if (currentURL == "/") {
     helper1Name.innerHTML = cnLogo[rnd][0];
     helper1Lingual.innerHTML = cnLogo[rnd][1];
     logoImg.src = cnLogo[rnd][2];
