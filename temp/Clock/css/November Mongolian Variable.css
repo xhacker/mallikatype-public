@@ -1,0 +1,120 @@
+/* 字体定义 */
+@font-face {
+	font-family:'NovemberMongolian';
+	src:url('fonts/NovemberMongolianGX.ttf') format('truetype');
+	font-variation-settings:'wght' 0,'wdth' 0;
+	font-weight:1 999;
+	font-stretch:1% 100%;
+}
+:root {
+	--TPTQ_Orange: rgb(255, 102, 0);
+	--TPTQ_Cyan: rgb(0, 182, 222);
+	--TPTQ_LightBlue: rgb(182, 237, 255);
+	--TPTQ_LightPink: rgb(255, 186, 207);
+	--TPTQ_Tan: rgb(190, 160, 116);
+	--TPTQ_WhiteSmoke: rgb(248, 248, 248);
+}
+/* 基础样式 */
+html {
+	height:100%;
+}
+body {
+	min-height:100%;
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	align-items:left;
+	flex-direction:column;
+	background-color:var(--TPTQ_WhiteSmoke);
+}
+body.dark-mode {
+	background-color:#1f1f1f;
+	color:white;
+}
+::-webkit-scrollbar {
+	width:0px;
+	background:transparent;
+}
+/* 主体样式 */
+.master {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	color:white;
+	height:64px;
+	background-color:var(--TPTQ_Orange);
+    user-select: none;
+    -webkit-user-select: none;
+}
+.master-btn,.feature-btn,.contrast-btn {
+	font-size:32px;
+	width:32px;
+	height:32px;
+	line-height:0.8;
+	cursor:pointer;
+	font-family:'NovemberMongolian';
+	font-variation-settings:'wght' 50,'wdth' 100;
+}
+.master-btn {
+	pointer-events: none;
+}
+.weight-value,.width-value,.font-size-value {
+	font-size:16px;
+	width:0;
+	height:32px;
+	line-height:32px;
+	font-family:'NovemberMongolian';
+	font-variation-settings:'wght' 80,'wdth' 100;
+	margin-left:4px;
+	margin-right:24px;
+    pointer-events: none;
+}
+.master-btn:nth-child(1) {
+	margin-left:32px;
+}
+.contrast-btn {
+	margin-left:8px;
+	margin-right:32px;
+}
+.feature-btn.active,.contrast-btn.active {
+	color:black;
+}
+.weight-slider,.width-slider,.font-size-slider {
+	margin-left:8px;
+	margin-right:8px;
+	width:100%;
+	height:1px;
+	background-color:white;
+	outline:none;
+	-webkit-appearance:none;
+	appearance:none;
+}
+.weight-slider::-webkit-slider-thumb,.width-slider::-webkit-slider-thumb,.font-size-slider::-webkit-slider-thumb {
+	-webkit-appearance:none;
+	appearance:none;
+	width:16px;
+	height:16px;
+	border-radius:16px;
+	background-color:white;
+	cursor:pointer;
+}
+/* 垂直文本样式 */
+.vertical {
+	direction:ltr;
+	writing-mode:vertical-lr;
+	text-orientation:sideways;
+	font-family:'NovemberMongolian';
+	font-variation-settings:'wght' 0,'wdth' 100;
+	width:calc(100% - 64px);
+	height:calc(100vh - 128px);
+	font-size:32px;
+	padding:32px;
+	column-count:auto;
+	column-gap:64px;
+	column-width:100vw;
+	outline:none;
+	line-height:1.25;
+	font-feature-settings:"ss20" off;
+}
