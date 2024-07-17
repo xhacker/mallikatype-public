@@ -156,20 +156,31 @@
     <script>
         let isVertical = true;
 
-        document.addEventListener('keydown', function (event) {
+        // 监听设备方向变化事件
+        window.addEventListener('orientationchange', function () {
             let vertical = document.querySelector('.vertical');
 
-            if (event.key === 'o') {
-                if (isVertical) {
-                    vertical.style.writingMode = 'horizontal-tb';
-                } else {
-                    vertical.style.writingMode = 'vertical-lr';
-                }
-                isVertical = !isVertical;
+            if (window.orientation === 0 || window.orientation === 180) {
+                // 竖屏
+                vertical.style.writingMode = 'vertical-lr';
+                isVertical = true;
+            } else if (window.orientation === 90 || window.orientation === -90) {
+                // 横屏
+                vertical.style.writingMode = 'horizontal-tb';
+                isVertical = false;
             }
         });
 
-
+        // 初始化写入模式
+        if (window.orientation === 0 || window.orientation === 180) {
+            // 竖屏
+            vertical.style.writingMode = 'vertical-lr';
+            isVertical = true;
+        } else if (window.orientation === 90 || window.orientation === -90) {
+            // 横屏
+            vertical.style.writingMode = 'horizontal-tb';
+            isVertical = false;
+        }
     </script>
 
     <script>
@@ -187,37 +198,8 @@
                 isMongolianNumber = !isMongolianNumber;
             }
         });
+
     </script>
-    
-<script>
-    // 屏幕方向变化事件
-    window.addEventListener('orientationchange', function() {
-        let screensaver = document.getElementById('screensaver');
-
-        if (window.orientation === 0 || window.orientation === 180) {
-            // 纵向
-            screensaver.classList.remove('horizontal');
-            screensaver.classList.add('vertical');
-        } else if (window.orientation === 90 || window.orientation === -90) {
-            // 横向
-            screensaver.classList.remove('vertical');
-            screensaver.classList.add('horizontal');
-        }
-    });
-
-    // 初始化时根据当前屏幕方向设置样式
-    window.addEventListener('load', function() {
-        let screensaver = document.getElementById('screensaver');
-
-        if (window.orientation === 0 || window.orientation === 180) {
-            // 纵向
-            screensaver.classList.add('vertical');
-        } else if (window.orientation === 90 || window.orientation === -90) {
-            // 横向
-            screensaver.classList.add('horizontal');
-        }
-    });
-</script>
 
 </body>
 
