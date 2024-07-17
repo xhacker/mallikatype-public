@@ -19,6 +19,13 @@
         </div>
     </div>
 
+    <div class="tips">
+        <div class="tips-info">space = Play/Pause</div>
+        <div class="tips-info">b = Warm/Cold</div>
+        <div class="tips-info">o = Vertical/Horizontal</div>
+        <div class="tips-info">n = Mongolian Numbers/Default Numbers</div>
+    </div>
+
     <script>
         // 获取需要动画的元素
         const vertical = document.querySelector('.vertical');
@@ -148,6 +155,7 @@
 
     <script>
         let isVertical = true;
+        let isMongolianNumber = true;
 
         // 监听设备方向变化事件
         window.addEventListener('orientationchange', function () {
@@ -156,10 +164,12 @@
             if (window.orientation === 0 || window.orientation === 180) {
                 // 竖屏
                 vertical.style.writingMode = 'vertical-lr';
+                vertical.style.fontFeatureSettings = isMongolianNumber ? '"ss18" on' : '"ss18" off';
                 isVertical = true;
             } else if (window.orientation === 90 || window.orientation === -90) {
                 // 横屏
                 vertical.style.writingMode = 'horizontal-tb';
+                vertical.style.fontFeatureSettings = '"ss18" off';
                 isVertical = false;
             }
         });
@@ -168,17 +178,17 @@
         if (window.orientation === 0 || window.orientation === 180) {
             // 竖屏
             vertical.style.writingMode = 'vertical-lr';
+            vertical.style.fontFeatureSettings = isMongolianNumber ? '"ss18" on' : '"ss18" off';
             isVertical = true;
         } else if (window.orientation === 90 || window.orientation === -90) {
             // 横屏
             vertical.style.writingMode = 'horizontal-tb';
+            vertical.style.fontFeatureSettings = '"ss18" off';
             isVertical = false;
         }
     </script>
 
     <script>
-        let isMongolianNumber = true;
-
         document.addEventListener('keydown', function (event) {
             let vertical = document.querySelector('.vertical');
 
@@ -191,7 +201,6 @@
                 isMongolianNumber = !isMongolianNumber;
             }
         });
-
     </script>
 
 </body>
