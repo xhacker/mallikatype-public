@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>November Mongolian Animation</title>
+    <meta name="viewport" content="width=640, user-scalable=no" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/November Mongolian Animation.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="screensaver vertical" id="screensaver">
+        <div class="timeBox">
+            <div id="year"></div>
+            <div id="month"></div>
+            <div id="day"></div>
+            <div id="week"></div>
+            <div id="time"></div>
+        </div>
+    </div>
+
+    <script>
+        // 获取需要动画的元素
+        const vertical = document.querySelector('.vertical');
+
+        // 设置一个标志位,用于记录动画是否暂停
+        let isPaused = false;
+
+        // 添加事件监听器,监听键盘按下事件
+        document.addEventListener('keydown', (event) => {
+            // 如果按下的键是空格键
+            if (event.code === 'Space') {
+                // 切换动画暂停状态
+                if (isPaused) {
+                    // 继续运行动画
+                    vertical.style.animationPlayState = 'running';
+                    document.getElementById('week').style.animationPlayState = 'running';
+                } else {
+                    // 暂停动画
+                    vertical.style.animationPlayState = 'paused';
+                    document.getElementById('week').style.animationPlayState = 'paused';
+                }
+                // 更新标志位
+                isPaused = !isPaused;
+            }
+        });
+    </script>
+
+    <script>
+        function showScreensaver() {
+            document.getElementById('screensaver').style.width = '100%';
+            year();
+            month();
+            day();
+            week();
+            startTime();
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            year();
+            month();
+            day();
+            week();
+            startTime();
+        };
+        // year
+        function year() {
+            var d = new Date();
+            document.getElementById('year').innerHTML = d.getFullYear();
+        }
+        // month
+        function month() {
+            var d = new Date();
+            var months = [
+                'January<br>ᠬᠠᠪᠤᠷ ᠊ᠤᠨ ᠲᠡᠷᠢᠭᠦᠨ',
+                'February<br>ᠬᠠᠪᠤᠷ ᠊ᠤᠨ ᠳᠤᠮᠳᠠ',
+                'March<br>ᠬᠠᠪᠤᠷ ᠊ᠤᠨ ᠰᠡᠭᠦᠯ',
+                'April<br>ᠵᠤᠨ ᠊ᠤ ᠲᠡᠷᠢᠭᠦᠨ',
+                'May<br>ᠵᠤᠨ ᠊ᠤ ᠳᠤᠮᠳᠠ',
+                'June<br>ᠵᠤᠨ ᠊ᠤ ᠰᠡᠭᠦᠯ',
+                'July<br>ᠨᠠᠮᠤᠷ ᠊ᠤᠨ ᠲᠡᠷᠢᠭᠦᠨ',
+                'August<br>ᠨᠠᠮᠤᠷ ᠊ᠤᠨ ᠳᠤᠮᠳᠠ',
+                'September<br>ᠨᠠᠮᠤᠷ ᠊ᠤᠨ ᠰᠡᠭᠦᠯ',
+                'October<br>ᠡᠪᠦᠯ ᠊ᠦᠨ ᠲᠡᠷᠢᠭᠦᠨ',
+                'November<br>ᠡᠭᠦᠯ ᠊ᠦᠨ ᠳᠤᠮᠳᠠ',
+                'December<br>ᠡᠪᠦᠯ ᠊ᠦᠨ ᠰᠡᠭᠦᠯ',
+            ];
+            document.getElementById('month').innerHTML = months[d.getMonth()];
+        }
+        // day
+        function day() {
+            var d = new Date();
+            document.getElementById('day').innerHTML = d.getDate();
+        }
+        // week
+        function week() {
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = 'Sunday<br>ᠨᠢᠮ᠎ᠠ';
+            weekday[1] = 'Monday<br>ᠳᠠᠸᠠ';
+            weekday[2] = 'Tuesday<br>ᠮᠢᠭᠮᠠᠷ';
+            weekday[3] = 'Wednesday<br>ᡀᠠᠭᠪᠠ';
+            weekday[4] = 'Thursday<br>ᠫᠦᠷᠪᠦ';
+            weekday[5] = 'Friday<br>ᠪᠠᠰᠠᠩ';
+            weekday[6] = 'Saturday<br>ᠪᠢᠮᠪᠠ';
+            document.getElementById('week').innerHTML = weekday[d.getDay()];
+        }
+        // time
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML = h + ' : ' + m + ' : ' + s;
+            t = setTimeout(function () {
+                startTime();
+            }, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = '0' + i;
+            }
+            return i;
+        }
+    </script>
+
+    <script>
+        let isCold = false;
+
+        document.addEventListener('keydown', function (event) {
+            let body = document.body;
+
+            if (event.key === 'b') {
+                if (isCold) {
+                    body.style.backgroundColor = 'var(--TPTQ_Orange)';
+                } else {
+                    body.style.backgroundColor = 'var(--TPTQ_Cyan)';
+                }
+                isCold = !isCold;
+            }
+        });
+
+    </script>
+
+    <script>
+        let isVertical = true;
+        let isMongolianNumber = true;
+
+        // 监听设备方向变化事件
+        window.addEventListener('orientationchange', function () {
+            let vertical = document.querySelector('.vertical');
+
+            if (window.orientation === 0 || window.orientation === 180) {
+                // 竖屏
+                vertical.style.writingMode = 'vertical-lr';
+                vertical.style.fontFeatureSettings = isMongolianNumber ? '"ss18" on' : '"ss18" off';
+                isVertical = true;
+            } else if (window.orientation === 90 || window.orientation === -90) {
+                // 横屏
+                vertical.style.writingMode = 'horizontal-tb';
+                vertical.style.fontFeatureSettings = '"ss18" off';
+                isVertical = false;
+            }
+        });
+
+        // 初始化写入模式
+        if (window.orientation === 0 || window.orientation === 180) {
+            // 竖屏
+            vertical.style.writingMode = 'vertical-lr';
+            vertical.style.fontFeatureSettings = isMongolianNumber ? '"ss18" on' : '"ss18" off';
+            isVertical = true;
+        } else if (window.orientation === 90 || window.orientation === -90) {
+            // 横屏
+            vertical.style.writingMode = 'horizontal-tb';
+            vertical.style.fontFeatureSettings = '"ss18" off';
+            isVertical = false;
+        }
+    </script>
+
+    <script>
+        document.addEventListener('keydown', function (event) {
+            let vertical = document.querySelector('.vertical');
+
+            if (event.key === 'n') {
+                if (isMongolianNumber) {
+                    vertical.style.fontFeatureSettings = '"ss18" off';
+                } else {
+                    vertical.style.fontFeatureSettings = '"ss18" on';
+                }
+                isMongolianNumber = !isMongolianNumber;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
