@@ -188,15 +188,3 @@ body {
 }
 }
 
-
-.vertical {
-    /* 添加必要的样式 */
-}
-
-/* 针对横屏的媒体查询 */
-@media screen and (orientation: landscape) {
-    .screensaver {
-        /* 调整位置的样式，例如增加上边距 */
-        margin-top: 1em; /* 你可以根据需要调整这个值 */
-    }
-}
