@@ -9,7 +9,7 @@
     <style>
         /* 默认样式 */
         body {
-            background-color: var(--TPTQ_Orange); /* 默认背景色 */
+            background-color: var(--CColor); /* 默认背景色 */
             color: black; /* 默认文字颜色 */
         }
 
@@ -162,24 +162,6 @@
             }
             return i;
         }
-    </script>
-
-    <script>
-        let isCold = false;
-
-        document.addEventListener('keydown', function (event) {
-            let body = document.body;
-
-            if (event.key === 'b') {
-                if (isCold) {
-                    body.style.backgroundColor = 'var(--TPTQ_Orange)';
-                } else {
-                    body.style.backgroundColor = 'var(--TPTQ_Cyan)';
-                }
-                isCold = !isCold;
-            }
-        });
-
     </script>
 
     <script>
